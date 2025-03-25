@@ -1,6 +1,4 @@
 ---
-extra_vars:
-  token: "{{ token }}"
 name: Echo hostname playbook
 hosts: all
 tasks:
