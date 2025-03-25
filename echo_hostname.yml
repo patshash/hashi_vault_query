@@ -1,10 +1,10 @@
 ---
-name: Echo hostname playbook
-hosts: all
-tasks:
-  - name: Hello Message
-    debug:
-      msg: Hello World!
-  - name: echo token
-    debug:
-      msg: token '{{ token }}'
+- name: Echo hostname playbook
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: Hello World!
+    - name: echo token
+      debug:
+        msg: token '{{ token }}'
