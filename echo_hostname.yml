@@ -7,4 +7,4 @@
         msg: Hello World!
     - name: echo token
       debug:
-        msg: token '{{ token }}'
+        msg: url '{{ url }}'
