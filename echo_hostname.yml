@@ -1,8 +1,16 @@
 - name: Echo hostname playbook
   hosts: all
   #become: yes  # This allows Ansible to use sudo
-
+---
+extra_vars:
+  token: "{{ token }}"
+  
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    
+    - name: echo token
+      debug:
+        msg: "token '{{ token }}'"
+
