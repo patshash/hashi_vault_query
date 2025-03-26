@@ -7,9 +7,6 @@
     - name: Hello Message
       debug:
         msg: Hello World!
-    - name: echo token
-      debug:
-        msg: url '{{ url }}'
     - name: echo role id
       debug:
         msg: url '{{ role_id }}'
