@@ -10,12 +10,18 @@
     - name: echo token
       debug:
         msg: url '{{ url }}'
+    - name: echo role id
+      debug:
+        msg: url '{{ role_id }}'
+    - name: echo secret_id
+      debug:
+        msg: url '{{ secret_id }}'
 #    - name: echo secret value
 #      debug:
 #        msg:  "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/tf_secret token='{{ token }}' 'namespace=admin' url='{{ url }}'') }}"
-    - name: use vars for lookup
-      vars:
-        ansible_hashi_vault_url: '{{ url }}'
-        ansible_hashi_vault_auth_method: token
-      set_fact:
-        secret1: "{{ lookup('community.hashi_vault.hashi_vault', 'kv/data/tf_secret', 'namespace=admin') }}"
+#    - name: use vars for lookup
+#      vars:
+#        ansible_hashi_vault_url: '{{ url }}'
+#        ansible_hashi_vault_auth_method: token
+#      set_fact:
+#        secret1: "{{ lookup('community.hashi_vault.hashi_vault', 'kv/data/tf_secret', 'namespace=admin') }}"
