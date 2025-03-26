@@ -1,6 +1,8 @@
 ---
 - name: Echo hostname playbook
   hosts: all
+  collections:
+    - community.hashi_vault.hashi_vault
   tasks:
     - name: Hello Message
       debug:
