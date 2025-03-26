@@ -8,9 +8,9 @@
     - name: echo token
       debug:
         msg: url '{{ url }}'
-    - name: echo secret value
-      debug:
-        msg:  "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/tf_secret token='{{ token }}' 'namespace=admin' url='{{ url }}'') }}"
+#    - name: echo secret value
+#      debug:
+#        msg:  "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/tf_secret token='{{ token }}' 'namespace=admin' url='{{ url }}'') }}"
     - name: use vars for lookup
       vars:
         ansible_hashi_vault_url: '{{ url }}'
